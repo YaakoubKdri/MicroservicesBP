@@ -1,0 +1,38 @@
+{
+  "realm": "demo",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "microservices-client",
+      "enabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "access.token.lifespan": "300"
+      }
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "microservice_user",
+        "description": "Role for microservice access"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "alice",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["microservice_user"]
+    }
+  ]
+}
