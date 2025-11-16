@@ -1,0 +1,13 @@
+package com.kadri.user.dto;
+
+import jakarta.persistence.Column;
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class UserRequest {
+    private String username;
+    private String email;
+    private String fullName;
+}
