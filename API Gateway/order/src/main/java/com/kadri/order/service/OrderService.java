@@ -65,6 +65,7 @@ public class OrderService {
         return orderRepository.findAll();
     }
 
+    @Transactional
     public Order updateStatus(Long id, OrderStatus status){
         Order order = getById(id);
         order.setStatus(status);
