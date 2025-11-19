@@ -87,5 +87,7 @@ management:
       exposure:
         include: health,info,env,metrics
 
+jwt:
+  secret: my-ultra-secret-key-change-me-please-64chars-min-I-need-to-be-long-enough-for-the-HS512-algorithm
 
 
