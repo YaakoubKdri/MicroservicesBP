@@ -3,9 +3,7 @@ package com.kadri.user.controller;
 import com.kadri.user.dto.UserRequest;
 import com.kadri.user.dto.UserResponse;
 import com.kadri.user.mapper.UserMapper;
-import com.kadri.user.model.User;
 import com.kadri.user.service.UserService;
-import jakarta.ws.rs.ext.ExceptionMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
