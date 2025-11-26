@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api")
 public class ResilientAppController {
 
     private final ExternalApiClient externalApiClient;
