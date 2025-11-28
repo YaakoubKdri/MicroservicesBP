@@ -13,6 +13,11 @@ management:
       enabled: true
     ratelimiters:
       enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
 resilience4j:
   circuitbreaker:
     instances:
