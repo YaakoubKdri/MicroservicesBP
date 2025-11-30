@@ -1,5 +1,8 @@
 server:
   port: 8080
+springdoc:
+  packages-to-scan: com.kadri.resilience4j
+
 management:
   endpoints:
     web:
