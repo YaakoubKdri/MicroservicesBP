@@ -74,19 +74,6 @@ curl http://localhost:8080/actuator/metrics/resilience4j.circuitbreaker.state | 
 
 ---
 
-## Tests notes
-
-* Integration tests use `@SpringBootTest(webEnvironment = RANDOM_PORT)` and `TestRestTemplate`.
-* In tests we disable the `RestTemplate` default error handler to assert HTTP status codes instead of exceptions. Example snippet used in tests:
-
-```java
-@BeforeEach
-void turnOffDefaultErrorHandling() {
-    restTemplate.getRestTemplate().setErrorHandler(new ResponseErrorHandler() {
-        @Override public boolean hasError(ClientHttpResponse response) { return false; }
-        @Override public void handleError(ClientHttpResponse response) { /* no-op */ }
-    });
-}
 ```
 
 * `application-test.yml` contains shorter timeouts and smaller window sizes to make tests deterministic and fast.
@@ -104,7 +91,7 @@ This project includes optional support for interactive API documentation using *
     * **Swagger UI:** `http://localhost:8080/swagger-ui/index.html`
     * **OpenAPI JSON:** `http://localhost:8080/v3/api-docs`
 
-### Dependency (already added or to add in pom.xml)
+### Dependency
 
 ```xml
 <dependency>
